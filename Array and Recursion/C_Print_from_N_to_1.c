@@ -1,19 +1,22 @@
 #include<stdio.h>
-void show(int n)
+void digit(int i)
 {
-    for(int i=n; i>=1; i--)
+    if(i==0)
     {
-        printf("%d",i);
-        if(i>1)
-        {
-            printf(" ");
-        }
+        return;
     }
+    
+    printf("%d",i);
+    if(i>=2)
+    {
+        printf(" ");
+    }
+    digit(i-1);
 }
 int main()
 {
     int n;
     scanf("%d",&n);
-    show(n);
+    digit(n);
     return 0;
 }

@@ -1,17 +1,18 @@
 #include<stdio.h>
-void digit(int i,int n)
+void prints(int i)
 {
-    if(i==n+1)
+    if(i==0)
     {
         return;
     }
-    printf("%d\n",i);
-    digit(i+1,n);
+    printf("I love Recursion\n");
+    prints(i-1);
 }
 int main()
 {
     int n;
     scanf("%d",&n);
-    digit(1,n);
+    prints(n);
+
     return 0;
 }
